@@ -1,6 +1,8 @@
 @import "/src/styles/main.scss";
 @import "/src/styles/card.scss";
+@import "/src/styles/header.scss";
 
 body {
+  margin-top: 80px;
   background-color: white;
 }
