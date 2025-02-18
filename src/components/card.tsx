@@ -26,7 +26,7 @@ export default function Card({ src, alt, title, description }: CardProps) {
           <h3 className="cardTitle">{title}</h3>
           <p className="cardSubTitle">{description}</p>
         </div>
-        <button className="itemToCartButton">
+        <button className="itemToCartButton" aria-label="장바구니에 담기">
           <span>
             <Image src={$cart} alt="장바구니에 담기" fill />
           </span>
