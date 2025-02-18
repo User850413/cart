@@ -1,13 +1,28 @@
+"use client";
+
 import Image from "next/image";
 
 import $cartIcon from "/public/icons/cart.svg";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
+
+  const onClickMain = () => {
+    router.push("/");
+  };
+
+  const onClickCartIcon = () => {
+    router.push("/cart");
+  };
+
   return (
     <header className="headerWrapper">
       <div>
-        <span>안녕하세요</span>
-        <button>
+        <button className="goToMain" onClick={onClickMain}>
+          메인으로
+        </button>
+        <button className="goToCart" onClick={onClickCartIcon}>
           <span>
             <Image
               className="cartIcon"

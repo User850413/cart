@@ -15,12 +15,14 @@
     align-items: center;
     justify-content: space-between;
 
-    & > span {
+    & .goToMain {
       color: #444;
-      cursor: default;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
     }
 
-    & > button {
+    & .goToCart {
       cursor: pointer;
       background-color: transparent;
       border: 2px solid #dddddd;
