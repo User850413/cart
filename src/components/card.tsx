@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
+import $cart from "/public/icons/cart.svg";
+
 interface CardProps {
   src: StaticImageData;
   alt: string;
@@ -15,8 +17,7 @@ export default function Card({ src, alt, title, description }: CardProps) {
           className="cardImage"
           src={src}
           alt={alt}
-          width={200}
-          height={150}
+          fill
           objectFit="cover"
         />
       </figure>
@@ -25,7 +26,11 @@ export default function Card({ src, alt, title, description }: CardProps) {
           <h3 className="cardTitle">{title}</h3>
           <p className="cardSubTitle">{description}</p>
         </div>
-        <button className="itemToCartButton">장바구니에 담기</button>
+        <button className="itemToCartButton">
+          <span>
+            <Image src={$cart} alt="장바구니에 담기" fill />
+          </span>
+        </button>
       </div>
     </div>
   );
