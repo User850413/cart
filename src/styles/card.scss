@@ -8,13 +8,15 @@ $card-color: #fefefe;
 }
 
 .cardWrapper {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $card-color;
   border-radius: 15px;
   cursor: pointer;
-  width: 400px;
+  width: 100%;
+  padding: 10px;
 
   &:hover {
     background-color: darken($card-color, 2%);
@@ -22,13 +24,13 @@ $card-color: #fefefe;
 
   & .cardImageSection {
     position: relative;
-    width: 200px;
+    width: 100%;
     max-width: 300px;
     height: 200px;
   }
 
   & .cardDescriptionSection {
-    width: 200px;
+    width: 100%;
     max-width: 300px;
     display: flex;
     align-items: center;

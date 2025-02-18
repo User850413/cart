@@ -3,9 +3,9 @@ import ITEMS from "@/constants/items";
 
 export default function Home() {
   return (
-    <div>
-      <h1>장바구니</h1>
-      <ul className="cart">
+    <div className="cardListWrapper">
+      <h1 className="cardListTitle">옷 목록</h1>
+      <ul className="cardList">
         {ITEMS.map((item) => (
           <li key={item.id}>
             <Card
