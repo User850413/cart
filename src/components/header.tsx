@@ -12,6 +12,10 @@ export default function Header() {
     router.push("/");
   };
 
+  const onClickHeart = () => {
+    router.push("/heart");
+  };
+
   const onClickCartIcon = () => {
     router.push("/cart");
   };
@@ -19,9 +23,18 @@ export default function Header() {
   return (
     <header className="headerWrapper">
       <div>
-        <button className="goToMain" onClick={onClickMain}>
-          메인으로
-        </button>
+        <ul>
+          <li>
+            <button className="goToMain" onClick={onClickMain}>
+              메인으로
+            </button>
+          </li>
+          <li>
+            <button className="goToHeart" onClick={onClickHeart}>
+              찜 목록
+            </button>
+          </li>
+        </ul>
         <button className="goToCart" onClick={onClickCartIcon}>
           <span>
             <Image
