@@ -1,4 +1,4 @@
-import Item from "@/components/item";
+import Card from "@/components/card";
 import ITEMS from "@/constants/items";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
       <ul className="cart">
         {ITEMS.map((item) => (
           <li key={item.id}>
-            <Item
+            <Card
               src={item.src}
               alt={item.alt}
               title={item.title}
