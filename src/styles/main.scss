@@ -1,0 +1,31 @@
+$background-color: #f1fade;
+
+.cardListWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $background-color;
+
+  & .cardListTitle {
+    background-color: darken($background-color, 17%);
+    width: fit-content;
+    margin-left: 20px;
+    cursor: default;
+  }
+
+  & .cardList {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin: 0 auto;
+    padding: 0 15px;
+    list-style-type: none;
+  }
+}
