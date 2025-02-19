@@ -57,24 +57,29 @@ $card-color: #fefefe;
       }
     }
 
-    & .itemToCartButton {
-      cursor: pointer;
-      background-color: transparent;
-      border: 2px solid #aaa;
-      aspect-ratio: 1/1;
-      position: relative;
-      width: 60px;
-      padding: 10px;
-      border-radius: 100%;
+    & .itemButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      & .itemButton {
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #aaa;
+        aspect-ratio: 1/1;
+        position: relative;
+        width: 30px;
+        padding: 10px;
+        border-radius: 100%;
 
-      &:hover {
-        background-color: darken($card-color, 10%);
-      }
+        &:hover {
+          background-color: darken($card-color, 10%);
+        }
 
-      & span {
-        @include align-center();
-        width: 60%;
-        height: 60%;
+        & span {
+          @include align-center();
+          width: 60%;
+          height: 60%;
+        }
       }
     }
   }
